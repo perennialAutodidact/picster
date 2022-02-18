@@ -38,7 +38,7 @@ else:
 
 SECRET_KEY = decouple.config(key)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['picster-raven.herokuapp.com']
 
 
 # Application definition
