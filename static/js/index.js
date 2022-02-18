@@ -3,7 +3,7 @@ let likeButtons = document.querySelectorAll('.like'),
     followButtons = document.querySelectorAll('.follow');
 
 console.log(followButtons);
-const BASE_URL = 'https://picster-raven.herokuapp.com/'
+const BASE_URL = 'https://picster-raven.herokuapp.com'
 const axios_config = {
    headers: {
     'Content-Type': 'application/json',
