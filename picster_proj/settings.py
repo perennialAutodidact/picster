@@ -147,6 +147,8 @@ STATIC_URL = 'static/'
 # direct django to the project-level static folder
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 # root directory for media files
 MEDIA_ROOT = 'static/'
 
