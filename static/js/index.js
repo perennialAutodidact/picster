@@ -3,7 +3,7 @@ let likeButtons = document.querySelectorAll('.like'),
     followButtons = document.querySelectorAll('.follow');
 
 console.log(followButtons);
-
+const BASE_URL = 'https://picster-raven.herokuapp.com/'
 const axios_config = {
    headers: {
     'Content-Type': 'application/json',
@@ -20,7 +20,7 @@ function handleLikeEvent(event){
   picId = picId.split('-')[1]
 
   // include the picId as a url parameter
-  url = 'http://localhost:8000/like/' + picId
+  url = BASE_URL + `/like/${picId}`
 
 
   // axios.post(url, data, config)
@@ -63,7 +63,9 @@ function handleFollowEvent(event){
   userId1 = event.target.id // follow-14
   userId1 = userId1.split('-')[1] // 14
 
-  url = 'http://localhost:8000/users/follow/' + userId1
+  // url = 'http://localhost:8000/users/follow/' + userId1
+  url = BASE_URL + `/users/follow/${userId1}`
+
   axios.post(url, {}, axios_config)
     .then(response=>{
 
