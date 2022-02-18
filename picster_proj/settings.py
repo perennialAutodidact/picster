@@ -31,6 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = decouple.config('DJANGO_DEBUG', cast=bool)
 
 
+
 if DEBUG:
     key = 'DJANGO_SECRET_KEY_DEVELOPMENT'
 else:
@@ -146,7 +147,7 @@ STATIC_URL = 'static/'
 
 # direct django to the project-level static folder
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # root directory for media files
